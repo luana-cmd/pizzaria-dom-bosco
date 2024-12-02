@@ -1,1 +1,226 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*define variáveis globais para cores e bordas, facilitando a manutenção e ajustes futuros*/
+:root {
+    --main-color--: #da190f;
+    --bg: #13131a;
+    --bg-card: #0c0c14;
+    --border: 0.1rem solid grey;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize; /*letras maiusculas*/
+    transition: 0.2s linear; /*transição habilitada por padrão*/
+    font-family: 'Roboto', 'sans-serif';
+    outline: none; /*deixamos as caixas e informações sem contorno*/
+}
+
+html {
+    font-size: 62.5%; /*configura o font-size para 62.5%, facilitando o uso do rem (1rem + 10px)*/
+    overflow: hidden; /*evita rolagem horizontal. hidden (itens não estouram)*/
+    /* Importa a fonte "Roboto" do Google Fonts em diversos estilos e pesos. */
+ }
+
+
+/* Define variáveis globais para cores e bordas, facilitando a manutenção e ajustes futuros. */
+:root {
+    --main-color: #da190f;
+    --bg: #13131a;
+    --bg-card: #0c0c14;
+    --border: 0.1rem solid grey;
+}
+
+/* Remove margens, paddings e bordas padrões.
+Define o comportamento de transição padrão para animações e utiliza a fonte Roboto.
+A propriedade text-transform: capitalize garante que todas as palavras comecem com letra maiúscula. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    /*LETRAS MAISCULA*/
+    transition: 0.2s linear;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+
+/* Configura o font-size para 62.5%, facilitando o uso de rem (1rem = 10px).
+Evita rolagem horizontal com overflow-x: hidden. (itens não estouram)
+Adiciona comportamento de rolagem suave. */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /*ocutar qualquer elemento que passa da tela (horizontal)*/
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem; /*personaliza o estilo da barra de rolagem no WebKit*/
+}
+
+
+html::-webkit-scrollbar-track {
+    background: transparent; /*personaliza o estilo da barra de rolagem no WebKit*/
+}
+
+html::-webkit-scrollbar-thumb {
+    /*personaliza o estilo da barra de rolagem no WebKit (Chrome e Safari)*/
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg); /*define o fundo da página xom a variável*/
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase; /*texto em caixa alta*/
+    padding: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase; /*texto encaixa algo*/
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem; /*espaçamento entre as letras ao passar o mouse*/
+}
+
+
+
+/* header */
+
+.header {
+    background: var(--bg);
+    /* Fundo igual ao corpo */
+    display: flex;
+    /* Usa flexbox para alinhar itens */
+    align-items: center;
+    /* Alinha verticalmente os itens ao centro */
+    justify-content: space-between;
+    /* Espaça itens igualmente */
+    padding: 1.5rem 7%;
+    /* Adiciona espaçamento interno */
+    border-bottom: var(--border);
+    /* Adiciona borda inferior */
+    position: fixed;
+    /* Fixa no topo da tela */
+    top: 0;
+    /* Define a posição inicial no topo */
+    left: 0;
+    /* Posiciona à esquerda */
+    right: 0;
+    /* Preenche até a direita */
+    z-index: 999;
+    /* Eleva o cabeçalho acima de outros elementos */
+}
+
+
+.header .logo img {
+    height: 6.5rem;
+    /* Define altura do logo */
+    border-radius: 100%;
+    /* Torna o logo circular */
+}
+
+
+.header nav a {
+    margin: 0 1rem;
+    /* Espaçamento lateral entre links */
+    font-size: 1.6rem;
+    /* Tamanho do texto dos links */
+    color: #fff;
+    /* Cor branca para links */
+}
+
+
+.header nav a:hover {
+    color: var(--main-color);
+    /* Muda a cor no hover */
+    border-bottom: 0.1rem solid var(--main-color);
+    /* Adiciona uma linha inferior no hover */
+    padding-bottom: 0.5rem;
+    /* Adiciona espaçamento inferior no hover */
+}
+
+.header .icons {
+    display: flex;
+    /* Usa flexbox para alinhar ícones */
+    align-items: center;
+    /* Alinha ícones verticalmente */
+}
+
+.header .icons div {
+    margin-left: 2rem;
+    /* Espaçamento entre os ícones */
+}
+
+
+.header .icons div ion-icon {
+    color: #fff;
+    /* Cor branca para ícones */
+    cursor: pointer;
+    /* Altera o cursor ao passar sobre o ícone */
+    font-size: 2.5rem;
+    /* Tamanho dos ícones */
+}
+
+.header .icons div ion-icon:hover {
+    color: var(--main-color);
+    /* Muda a cor do ícone ao passar o mouse */
+}
+
+#menu-btn {
+    display: none;
+    /* Oculta o botão de menu por padrão */
+}
+
+
+
+/* Home */
+#home {
+    position: relative;
+    /* Permite posicionamento relativo */
+    min-height: 85vh;
+    /* Altura mínima da seção */
+    display: flex;
+    /* tornando flex */
+    align-items: center;
+    /* Centraliza verticalmente */
+    background: url(img/home.jpg) no-repeat;
+    /* Adiciona imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir o container */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    border-bottom: var(--border);
+    /* Adiciona borda inferior */
+}
